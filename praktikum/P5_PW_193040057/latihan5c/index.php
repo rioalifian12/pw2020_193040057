@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
 </head>
 <body>
@@ -45,13 +46,15 @@
   </div>
 </nav>
 <section id="about" class="about">
-<div class="container">
+<div class="container mt-2">
 <?php foreach ($tubes_193040057 as $tubes) : ?>
+          <table class="table">
             <p class="nama">
                 <a href="php/detail.php?id=<?= $tubes['id'] ?>">
                     <?= $tubes["nama"] ?>
                 </a>
             </p>
+          </table>
         <?php endforeach; ?>
 </div>
 </section>

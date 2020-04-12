@@ -59,7 +59,11 @@
         <?php foreach ($tubes_193040057 as $tubes) : ?>
                 <tr>
                     <td><?= $i?></td>
-                    <td><img src="assets/img/<?= $tubes["gambar"] ?>"></td>
+                    <td>
+                      <div class="gambar">
+                        <img src="assets/img/<?= $tubes["gambar"]?>" style="height: 100px; width: 100px;">
+                      </div>
+                    </td>
                     <td><?= $tubes["nama"]?></td>
                     <td><?= $tubes["asal"]?></td>
                     <td><?= $tubes["jenis"]?></td>
