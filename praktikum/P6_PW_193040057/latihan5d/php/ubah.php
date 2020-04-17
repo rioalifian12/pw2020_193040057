@@ -1,15 +1,18 @@
 <?php
 require 'functions.php';
 
-if (isset($_POST['tambah'])) {
-    if (tambah($_POST) > 0) {
+$id = $_GET['id'];
+$tubes = query("SELECT * FROM makanan WHERE id = $id")[0];
+
+if (isset($_POST['ubah'])) {
+    if (ubah($_POST) > 0) {
         echo "<script>
-    alert('data berhasil ditambahkan');
+    alert('data berhasil diubah');
     document.location.href = 'admin.php';
     </script>";
     } else {
         echo "<script>
-    alert('data gagal ditambahkan');
+    alert('data gagal diubah');
     document.location.href = 'admin.php';
     </script>";
     }
@@ -63,15 +66,20 @@ if (isset($_POST['tambah'])) {
         </div>
     </nav>
 
-    <h3 class="mt-4">Form Tambah Data</h3>
+    <h3 class="mt-4">Form Ubah Data</h3>
     <form action="" method="post">
         <table border="0" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <input type="hidden" name="id" id="id" value="<?= $tubes['id']; ?>">
+                </td>
+            </tr>
             <tr>
                 <td>
                     <label for="gambar">Gambar</label>
                 </td>
                 <td>
-                    <input type="text" name="gambar" id="gambar" required>
+                    <input type="text" name="gambar" id="gambar" required value="<?= $tubes['gambar']; ?>">
                 </td>
             </tr>
             <tr>
@@ -79,7 +87,7 @@ if (isset($_POST['tambah'])) {
                     <label for="nama">Nama</label>
                 </td>
                 <td>
-                    <input type="text" name="nama" id="nama" required>
+                    <input type="text" name="nama" id="nama" required value="<?= $tubes['nama']; ?>">
                 </td>
             </tr>
             <tr>
@@ -87,7 +95,7 @@ if (isset($_POST['tambah'])) {
                     <label for="asal">Asal</label>
                 </td>
                 <td>
-                    <input type="text" name="asal" id="asal" required>
+                    <input type="text" name="asal" id="asal" required value="<?= $tubes['asal']; ?>">
                 </td>
             </tr>
             <tr>
@@ -95,7 +103,7 @@ if (isset($_POST['tambah'])) {
                     <label for="jenis">Jenis</label>
                 </td>
                 <td>
-                    <input type="text" name="jenis" id="jenis" required>
+                    <input type="text" name="jenis" id="jenis" required value="<?= $tubes['jenis']; ?>">
                 </td>
             </tr>
             <tr>
@@ -103,12 +111,12 @@ if (isset($_POST['tambah'])) {
                     <label for="harga">Harga</label>
                 </td>
                 <td>
-                    <input type="text" name="harga" id="harga" required>
+                    <input type="text" name="harga" id="harga" required value="<?= $tubes['harga']; ?>">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button type="submit" name="tambah" class="btn btn-primary text-light">Tambah Data</button>
+                    <button type="submit" name="ubah" class="btn btn-primary text-light">Ubah Data</button>
                     <button type="submit" class="btn btn-primary">
                         <a href="admin.php" class="text-light" style="text-decoration: none;">Kembali</a>
                     </button>

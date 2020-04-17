@@ -37,3 +37,36 @@ function tambah($data)
 
     return mysqli_affected_rows($conn);
 }
+
+function hapus($id)
+{
+    $conn = koneksi();
+    mysqli_query($conn, "DELETE FROM makanan WHERE id = $id");
+
+    return mysqli_affected_rows($conn);
+}
+
+function ubah($data)
+{
+    $conn = koneksi();
+
+    $id = $data['id'];
+    $gambar = htmlspecialchars($data['gambar']);
+    $nama =  htmlspecialchars($data['nama']);
+    $asal = htmlspecialchars($data['asal']);
+    $jenis = htmlspecialchars($data['jenis']);
+    $harga = htmlspecialchars($data['harga']);
+
+    $queryubah = "UPDATE 
+            makanan
+            SET
+            gambar = '$gambar',
+            nama = '$nama',
+            asal = '$asal',
+            jenis = '$jenis',
+            harga = '$harga'
+            WHERE id = '$id'";
+    mysqli_query($conn, $queryubah);
+
+    return mysqli_affected_rows($conn);
+}
