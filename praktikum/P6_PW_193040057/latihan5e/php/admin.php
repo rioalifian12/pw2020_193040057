@@ -2,10 +2,17 @@
 
 require 'functions.php';
 
-$tubes_193040057 = query("SELECT * FROM makanan");
-
-if (isset($_POST["cari"])) {
-  $tubes_193040057 = cari($_POST["keyword"]);
+if (isset($_GET["cari"])) {
+  $keyword = $_GET["keyword"];
+  $tubes_193040057 = query("SELECT * FROM makanan 
+                    WHERE 
+                    gambar LIKE '%$keyword%' OR
+                    nama LIKE '%$keyword%' OR
+                    asal LIKE '%$keyword%' OR
+                    jenis LIKE '%$keyword%' OR
+                    harga LIKE '%$keyword%'");
+} else {
+  $tubes_193040057 = query("SELECT * FROM makanan");
 }
 ?>
 
@@ -52,7 +59,7 @@ if (isset($_POST["cari"])) {
     </div>
   </nav>
   <div class="container">
-    <form action="" method="post" class="form-inline my-2 my-lg-0">
+    <form action="" method="get" class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" name="keyword" autocomplete="off" style="width: 240px;" autofocus>
       <button class="btn btn-primary my-2 my-sm-2" type="submit" name="cari">Cari</button>
     </form>

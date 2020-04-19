@@ -70,17 +70,3 @@ function ubah($data)
 
     return mysqli_affected_rows($conn);
 }
-
-
-function cari($keyword)
-{
-    $query = "SELECT * FROM makanan 
-                    WHERE 
-                    gambar LIKE '%$keyword%' OR
-                    nama LIKE '%$keyword%' OR
-                    asal LIKE '%$keyword%' OR
-                    jenis LIKE '%$keyword%' OR
-                    harga LIKE '%$keyword%'
-                    ";
-    return query($query);
-}
