@@ -2,6 +2,10 @@
 require 'php/functions.php';
 
 $tubes_193040057 = query("SELECT * FROM makanan");
+
+if (isset($_POST["cari"])) {
+  $tubes_193040057 = cari($_POST["keyword"]);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +47,9 @@ $tubes_193040057 = query("SELECT * FROM makanan");
           </div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      <form action="" method="post" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" name="keyword" autocomplete="off">
+        <button class=" btn btn-outline-light my-2 my-sm-0" type="submit" name="cari">Search</button>
       </form>
     </div>
   </nav>
@@ -54,15 +58,23 @@ $tubes_193040057 = query("SELECT * FROM makanan");
       <div class="add mb-3 mt-4">
         <a href="php/admin.php"><button type="button" class="kembali btn btn-primary text-light">Ke Admin</button></a>
       </div>
-      <?php foreach ($tubes_193040057 as $tubes) : ?>
-        <table class="table">
-          <td>
-            <a href="php/detail.php?id=<?= $tubes['id'] ?>">
-              <?= $tubes["nama"] ?>
-            </a>
+      <?php if (empty($tubes_193040057)) : ?>
+        <tr>
+          <td colspan="7">
+            <h1>Data tidak ditemukan</h1>
           </td>
-        </table>
-      <?php endforeach; ?>
+        </tr>
+      <?php else : ?>
+        <?php foreach ($tubes_193040057 as $tubes) : ?>
+          <table class="table">
+            <td>
+              <a href="php/detail.php?id=<?= $tubes['id'] ?>">
+                <?= $tubes["nama"] ?>
+              </a>
+            </td>
+          </table>
+        <?php endforeach; ?>
+      <?php endif; ?>
     </div>
   </section>
 </body>

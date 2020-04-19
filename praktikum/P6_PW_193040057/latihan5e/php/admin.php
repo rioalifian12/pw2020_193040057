@@ -2,16 +2,10 @@
 
 require 'functions.php';
 
-if (isset($_GET['cari'])) {
-  $keyword = $_GET['keyword'];
-  $tubes_193040057 = query("SELECT * FROM makanan WHERE 
-                    gambar LIKE '%keyword%' OR
-                    nama LIKE '%keyword%' OR
-                    asal LIKE '%keyword%' OR
-                    jenis LIKE '%keyword%' OR
-                    harga LIKE '%keyword%'");
-} else {
-  $tubes_193040057 = query("SELECT * FROM makanan");
+$tubes_193040057 = query("SELECT * FROM makanan");
+
+if (isset($_POST["cari"])) {
+  $tubes_193040057 = cari($_POST["keyword"]);
 }
 ?>
 
@@ -58,15 +52,14 @@ if (isset($_GET['cari'])) {
     </div>
   </nav>
   <div class="container">
+    <form action="" method="post" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" name="keyword" autocomplete="off" style="width: 240px;" autofocus>
+      <button class="btn btn-primary my-2 my-sm-2" type="submit" name="cari">Cari</button>
+    </form>
+    <div class="add mb-3 mt-2">
+      <a href="tambah.php"><button type="button" class="kembali btn btn-primary text-light">Tambah Data</button></a>
+    </div>
     <table class="table">
-      <div class="add mb-3">
-        <a href="tambah.php"><button type="button" class="kembali btn btn-primary text-light">Tambah Data</button></a>
-      </div>
-      <form action="" method="get">
-        <input type="text" name="keyword" autofocus><br>
-        <button type="submit" name="cari">Cari</button>
-      </form>
-      <br>
       <tr>
         <th>NO</th>
         <th>Opsi</th>
@@ -88,8 +81,8 @@ if (isset($_GET['cari'])) {
           <tr>
             <td><?= $i ?></td>
             <td>
-              <div><button type="button" class="update btn btn-primary"><a href="ubah.php?id=<?= $tubes['id']; ?>" class="text-light">Ubah</a></button></div>
-              <div><button type="button" class="delete btn btn-danger"><a href="hapus.php?id=<?= $tubes['id']; ?>" onclick="return confirm('Hapus Data??')" class="text-light">Hapus</a></button></div>
+              <button type="button" class="update btn btn-primary"><a href="ubah.php?id=<?= $tubes['id']; ?>" class="text-light">Ubah</a></button>
+              <button type="button" class="delete btn btn-danger"><a href="hapus.php?id=<?= $tubes['id']; ?>" onclick="return confirm('Hapus Data??')" class="text-light">Hapus</a></button>
             </td>
             <td>
               <div class="gambar">
