@@ -69,6 +69,7 @@
               <a class="dropdown-item" href="kuliah/pertemuan9">Pertemuan9</a>
               <a class="dropdown-item" href="kuliah/pertemuan10">Pertemuan10</a>
               <a class="dropdown-item" href="kuliah/pertemuan11/index.php">Pertemuan11</a>
+              <a class="dropdown-item" href="kuliah/pertemuan12">Pertemuan12</a>
             </div>
           </div>
         </div>
