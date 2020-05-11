@@ -133,7 +133,7 @@ function ubah($data)
     return false;
   }
 
-  if ($gambar = 'nopoto.jpg') {
+  if ($gambar == 'nopoto.jpg') {
     $gambar = $gambar_lama;
   }
 

@@ -1,0 +1,432 @@
+html {
+	scroll-behavior: smooth;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+span {
+	background-color: yellow;
+	color: white;
+	padding-right: 2px;
+	border-radius: 10%;
+}
+
+.navbar {
+	position: relative;
+	z-index: 1;
+}
+
+.search {
+	color: black;
+}
+
+.search:hover {
+	color: black;
+}
+
+.navbar-brand {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.navbar-nav {
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.navbar .nav-link {
+	border: 1px solid black;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.navbar .nav-item {
+	padding-bottom: 5px;
+}
+
+.form-inline .btn {
+	margin-left: 175px;
+}
+
+.jumbotron {
+	background-size: cover;
+	height: 600px;
+	text-align: center;
+	position: relative;
+}
+
+.jumbotron .container {
+	z-index: 1;
+	position: relative;
+}
+
+.jumbotron::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 80%;
+	background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+	position: absolute;
+	bottom: 0;
+}
+
+.jumbotron .display-4 {
+	color: white;
+	margin-top: 150px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	font-size: 40px;
+	margin-bottom: 30px;
+	font-size: 70px;
+}
+
+#btn {
+	height: 60px;
+}
+
+.jumbotron .display-4 span {
+	font-weight: 500;
+}
+
+.jumbotron p {
+	font-family: times new roman;
+	font-size: 22px;
+	color: #a8a0a0;
+}
+
+.about .container {
+	padding: 10px 0 100px 0;
+}
+
+.about h2 {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+.about h5 {
+	text-align: center;
+}
+
+.about img {
+	margin: auto;
+	display: block;
+}
+
+.pencapaian {
+    background-image: url("../assets/img/parallax.jpg");
+    height: 850px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.pencapaian .container {
+	z-index: 1;
+	position: relative;
+}
+
+.pencapaian::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+	position: absolute;
+	bottom: 0;
+}
+
+.pencapaian h2 {
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	font-weight: bold;
+}
+
+.pencapaian p {
+	color: white;
+	text-align: center;
+	padding-top: 50px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding-top: 10px;
+}
+
+.pencapaian img {
+	margin: auto;
+	display: block;
+	padding-bottom: 0px;
+}
+
+.gambar	{
+	padding-right: 20px;
+	position: relative;
+	border: 5px solid white;
+	box-shadow: 0 0 5px rgba(0,0,0,.3);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.gambar img{
+	width: 450px;
+}
+
+.gambar:hover .caption{
+	opacity: 1;
+	top: 0;
+}
+
+.caption	{
+	opacity: 0;
+	position: absolute;
+	top: -100%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	color: white;
+	font-family: arial;
+}
+
+.caption h3 {
+	padding: 10px 20px 10px 20px;
+	margin-bottom: 0;
+	position: relative;
+	left: 0;
+	color: white;
+	margin-top: 20px;
+}
+
+.caption p{
+	padding: 10px 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+	position: relative;
+	left: 0;
+	color: white;
+}
+
+.gambar:hover h3 {
+	left: 100;
+	font-weight: bold;
+}
+
+.gambar:hover p {
+	left: 100;
+}
+
+.gambar:hover img {
+	filter: blur(3px);
+}
+
+.portofolio h2 {
+	font-weight: bold;
+}
+
+.partner {
+    background-image: url("../assets/img/partner1.jpg");
+    height: 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+
+.partner .container {
+	z-index: 1;
+	position: relative;
+}
+
+.partner::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+	position: absolute;
+	bottom: 0;
+}
+
+.partner h2 {
+	color: white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	font-weight: bold;
+}
+
+.partner p {
+	color: white;
+	text-align: center;
+	padding-top: 50px;
+	font-weight: bold;
+}
+
+.partner img {
+	height: 200px;
+	margin: auto;
+	display: block;				
+	padding-bottom: 20px;
+}
+
+.partner .sanur {
+	height: 190px;
+}
+
+.partner .informa {
+	height: 110px;
+}
+
+footer {
+	padding-top: 20px;
+	margin-top: 90px;
+	height: 100px;
+	background-color: #e0e0e0;
+	font-weight: bold;
+}
+
+.contact h2 {
+	font-weight: bold;
+}
+
+.contact p {
+	font-family: times new roman;
+	font-size: 22px;
+	color: #a8a0a0;
+}
+
+.contact img {
+	height: 50px;
+	padding-left: 10px;
+}
+
+.contact .gm {
+	height: 60px;
+}
+
+#name {
+	height: 50px;
+}
+
+#email {
+	height: 50px;
+}
+
+#handphone {
+	height: 50px;
+}
+
+#message {
+	height: 180px;
+}
+
+#button {
+	margin: auto;
+	width: 340px;
+	height: 50px;
+}
+
+.btt {
+	position: absolute;
+	z-index: -9999;
+	margin-bottom: -1557px;
+	margin-left: 250px;
+}
+
+.btt:hover {
+	background-image: url(../assets/icons/up1.png);
+	color: white;
+}
+
+.footer p {
+	color: #ADADAD;
+	font-size: 18px;
+}
+
+/*VERSI DESKTOP*/
+
+@media (min-width: 992px) {
+.navbar .nav-link {
+	border: 0 solid black;
+	border-radius: 0;
+	text-align: center;
+}
+
+.navbar .nav-item {
+	padding-bottom: 0;
+}
+
+.navbar-nav {
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+.navbar .nav-link {
+	border: 0 solid black;
+	border-radius: 0;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.navbar .nav-item {
+	padding-bottom: 10px;
+}
+
+.form-inline .btn {
+	margin-left: 0;
+	width: 70px;
+}
+
+.about h5 {
+	text-align: center;
+}
+
+.about img {
+	margin-left: 140px;
+}
+
+.pencapaian img {
+	margin-left: 200px;
+}
+
+.pencapaian {
+	height: 500px;
+}
+
+.partner {
+	height: 360px;
+}
+
+.partner img {
+	height: 200px;
+	padding-top: 10px;
+	margin-left: 2px;
+}
+
+.partner .informa {
+	margin-top: 50px;
+}
+
+#button {
+	width: 350px;
+}
+
+footer p {
+	padding-top: 9px;
+}
+
+.btt {
+	position: fixed;
+	z-index: 1;
+	margin-top: 557px;
+	margin-left: 1250px;
+}
+
+.btt:hover {
+	background-image: url(../assets/icons/up1.png);
+	color: white;
+}
+}
