@@ -209,7 +209,7 @@ if (isset($_SESSION['username'])) {
     <div class="container">
       <div class="row pt-3">
         <div class="col text-center">
-          <p>COPYRIGHT &copy 2020 Rumah Ayam. Bandung, Jawa Barat, Indonesia</p>
+          <p>COPYRIGHT &copy 2020 Makan Khas. Bandung, Jawa Barat, Indonesia</p>
         </div>
       </div>
     </div>
