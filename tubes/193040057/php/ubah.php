@@ -14,7 +14,7 @@ if (!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
-$tubes = query("SELECT * FROM makanan WHERE id = $id")[0];
+$tubes = query("SELECT * FROM makanan WHERE id = $id");
 
 if (isset($_POST['ubah'])) {
     if (ubah($_POST) > 0) {

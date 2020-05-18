@@ -9,7 +9,7 @@ if (isset($_SESSION['username'])) {
 require 'functions.php';
 $id = $_GET['id'];
 
-$tubes_193040057 = query("SELECT * FROM makanan WHERE id = $id")[0];
+$tubes_193040057 = query("SELECT * FROM makanan WHERE id = $id");
 ?>
 <!DOCTYPE html>
 <html lang="en">
