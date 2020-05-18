@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+if (isset($_SESSION['username'])) {
+  header("Location: admin.php");
+  exit;
+}
+
 require 'functions.php';
 
 if (isset($_COOKIE['username']) && isset($_COOKIE['hash'])) {

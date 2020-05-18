@@ -2,6 +2,11 @@
 session_start();
 require 'functions.php';
 
+if (isset($_SESSION['username'])) {
+  header("Location: admin.php");
+  exit;
+}
+
 if (isset($_POST["register"])) {
 
   if (registrasi($_POST) > 0) {

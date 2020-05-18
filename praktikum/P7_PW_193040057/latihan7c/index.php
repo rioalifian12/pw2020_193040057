@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (isset($_SESSION['username'])) {
+  header("Location: php/admin.php");
+  exit;
+}
 require 'php/functions.php';
 
 $tubes_193040057 = query("SELECT * FROM makanan");
