@@ -99,11 +99,11 @@ if (isset($_POST['submit'])) {
   </nav>
 
   <form action="" method="post">
-    <?php if (isset($error)) : ?>
-      <p style="color: red; font-style: italic;"> Username atau Password salah!</p>
-    <?php endif; ?>
     <div class="container">
       <h1>Form Login</h1>
+      <?php if (isset($error)) : ?>
+        <p style="color: red; font-style: italic;"> Username atau Password salah!</p>
+      <?php endif; ?>
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="username">Username</label>

@@ -77,8 +77,11 @@ if (isset($_POST['ubah'])) {
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label for="jenis">Jenis</label>
-                    <input type="text" name="jenis" class="form-control" id="jenis" required value="<?= $tubes['jenis']; ?>">
+                    <label for="jenis">Jenis : <?= $tubes['jenis']; ?></label>
+                    <select name="jenis" class="form-control">
+                        <option>Makanan</option>
+                        <option>Minuman</option>
+                    </select>
                 </div>
             </div>
             <div class="form-row">
