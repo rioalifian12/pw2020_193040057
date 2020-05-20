@@ -26,11 +26,11 @@ $tubes_193040057 = query("SELECT * FROM makanan WHERE id = $id");
   <div style="background-color: darkorange;">
     <ul class="navbar-nav mr-auto">
       <li style="margin-top: -12px; margin-right: 50px; text-align: right;">
-        <a class="nav-link text-light" href="login.php" style="margin-left: 1000px; visibility:hidden;">Masuk</a>
+        <a class="nav-link text-light" href="php/login.php" style="margin-left: 100px;">Masuk</a>
       </li>
     </ul>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light" id="beranda" style="height: 100px;">
+  <nav class="navbar navbar-expand-lg navbar-light" id="beranda">
     <div class="container">
       <a class="navbar-brand" href="#top"><span style="background-color: orange;">Makan</span> <span style="background-color: darkorange; margin-left:-8px;">Khas</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@ $tubes_193040057 = query("SELECT * FROM makanan WHERE id = $id");
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link text-dark pl-0" href="#top">Beranda<span class="sr-only">(current)</span></a>
+            <a class="nav-link text-dark pl-0" href="../#top">Beranda<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="index.php">Menu</a>
@@ -49,10 +49,10 @@ $tubes_193040057 = query("SELECT * FROM makanan WHERE id = $id");
             <a class="nav-link text-dark" href="../#about">Tentang</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#pencapaian">Pencapaian</a>
+            <a class="nav-link text-dark" href="../#pencapaian">Pencapaian</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#contact">Kontak</a>
+            <a class="nav-link text-dark" href="../#contact">Kontak</a>
           </li>
         </ul>
       </div>

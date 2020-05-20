@@ -27,11 +27,11 @@ if (isset($_SESSION['username'])) {
   <div style="background-color: darkorange;">
     <ul class="navbar-nav mr-auto">
       <li style="margin-top: -12px; margin-right: 50px; text-align: right;">
-        <a class="nav-link text-light" href="php/login.php" style="margin-left: 1000px;">Masuk</a>
+        <a class="nav-link text-light" href="php/login.php" style="margin-left: 100px;">Masuk</a>
       </li>
     </ul>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light" id="beranda" style="height: 100px;">
+  <nav class="navbar navbar-expand-lg navbar-light" id="beranda">
     <div class="container">
       <a class="navbar-brand" href="#top"><span style="background-color: orange;">Makan</span> <span style="background-color: darkorange; margin-left:-8px;">Khas</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@ if (isset($_SESSION['username'])) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link text-dark pl-0" href="#top">Beranda<span class="sr-only">(current)</span></a>
+            <a class="nav-link text-dark" href="#top">Beranda<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="php/index.php">Menu</a>
@@ -67,24 +67,24 @@ if (isset($_SESSION['username'])) {
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active" style="height: 495px;">
+      <div class="carousel-item active">
         <img src="assets/img/b5.png" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1>Rendang</h1>
+          <p>Rendang</p>
           <h5>Jagonya rendangan di Indonesia</h5>
         </div>
       </div>
-      <div class="carousel-item" style="height: 495px;">
+      <div class="carousel-item">
         <img src="assets/img/b6.jpg" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1>Kerak Telor</h1>
+          <p>Kerak Telor</p>
           <h5>Menggunakan telur terbaik</h5>
         </div>
       </div>
-      <div class="carousel-item" style="height: 495px;">
+      <div class="carousel-item">
         <img src="assets/img/b7.png" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1>Bika Ambon</h1>
+          <p>Bika Ambon</p>
           <h5>Rasanya dijamin gak akan ngecewain</h5>
         </div>
       </div>
@@ -115,7 +115,7 @@ if (isset($_SESSION['username'])) {
         <div class="col-md-4 pt-4 text-justify">
           <img src="assets/icons/date.png">
           <h5>Tahun Berdiri</h5>
-          <p class="pt-3 pl-4 pr-4">MakanKhas didirikan pada tahun 2019, di Bandung.</p>
+          <p class="pt-3 pl-4 pr-4">Makan Khas didirikan pada tahun 2019, di Bandung.</p>
         </div>
         <div class="col-md-4 pt-4 text-justify">
           <img src="assets/icons/visi.png">
@@ -136,24 +136,24 @@ if (isset($_SESSION['username'])) {
       </div>
       <div class="row justify-content-left">
         <div class="col-md-4 pt-5 text-justify">
-          <img src="assets/icons/check.png" style="margin-left: 150px;">
+          <img src="assets/icons/check.png">
           <p>PRODUK</p>
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
+            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
           </div>
         </div>
         <div class="col-md-4 pt-5 text-justify">
-          <img src="assets/icons/happy.png" style="margin-left: 150px;">
+          <img src="assets/icons/happy.png">
           <p>KEPUASAN KONSUMEN</p>
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
           </div>
         </div>
         <div class="col-md-4 pt-5 text-justify">
-          <img src="assets/icons/trophy.png" style="margin-left: 150px;">
+          <img src="assets/icons/trophy.png">
           <p>PENGEHARGAAN</p>
           <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+            <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">65%</div>
           </div>
         </div>
       </div>

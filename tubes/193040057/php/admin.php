@@ -30,11 +30,11 @@ if (isset($_POST['cari'])) {
   <div style="background-color: darkorange;">
     <ul class="navbar-nav mr-auto">
       <li style="margin-top: -12px; margin-right: 50px; text-align: right;">
-        <a class="nav-link text-light" href="logout.php" style="margin-left: 1000px;">Logout</a>
+        <a class="nav-link text-light" href="logout.php" style="margin-left: 100px;">Logout</a>
       </li>
     </ul>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light" id="beranda" style="height: 100px;">
+  <nav class="navbar navbar-expand-lg navbar-light" id="beranda">
     <div class="container">
       <a class="navbar-brand" href="#top"><span style="background-color: orange;">Makan</span> <span style="background-color: darkorange; margin-left:-8px;">Khas</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,47 +49,49 @@ if (isset($_POST['cari'])) {
       </div>
     </div>
   </nav>
-  <div class="container con">
-    <div class="add mb-3 mt-2">
-      <a href="tambah.php"><button type="button" class="kembali btn btn-primary text-light">Tambah Data</button></a>
-    </div>
-    <table class="table">
-      <tr class="text-light" style="background-color: orange;">
-        <th>NO</th>
-        <th>Opsi</th>
-        <th>Gambar</th>
-        <th>Nama</th>
-        <th>Asal</th>
-        <th>Jenis</th>
-        <th>Harga</th>
-      </tr>
-      <?php if (empty($tubes_193040057)) : ?>
-        <tr>
-          <td colspan="7">
-            <h1>Data tidak ditemukan</h1>
-          </td>
+  <div class="con">
+    <section>
+      <div class="add mb-3 mt-2">
+        <a href="tambah.php"><button type="button" class="tambah btn btn-primary text-light">Tambah Data</button></a>
+      </div>
+      <table class="table">
+        <tr class="text-light" style="background-color: orange;">
+          <th>NO</th>
+          <th>Opsi</th>
+          <th>Gambar</th>
+          <th>Nama</th>
+          <th>Asal</th>
+          <th>Jenis</th>
+          <th>Harga</th>
         </tr>
-      <?php else : ?>
-        <?php $i = 1; ?>
-        <?php foreach ($tubes_193040057 as $tubes) : ?>
+        <?php if (empty($tubes_193040057)) : ?>
           <tr>
-            <td><?= $i ?></td>
-            <td>
-              <a href="ubah.php?id=<?= $tubes['id']; ?>" class="text-light"><button type="button" class="update btn btn-primary">Ubah</button></a>
-              <a href="hapus.php?id=<?= $tubes['id']; ?>" onclick="return confirm('Hapus Data??')" class="text-light"><button type="button" class="delete btn btn-danger">Hapus</button></a>
+            <td colspan="7">
+              <h1>Data tidak ditemukan</h1>
             </td>
-            <td>
-              <img src="../assets/img/<?= $tubes['gambar'] ?>" style="height: 100px; width: 100px;">
-            </td>
-            <td><?= $tubes['nama'] ?></td>
-            <td><?= $tubes['asal'] ?></td>
-            <td><?= $tubes['jenis'] ?></td>
-            <td><?= $tubes['harga'] ?></td>
           </tr>
-          <?php $i++ ?>
-        <?php endforeach; ?>
-      <?php endif; ?>
-    </table>
+        <?php else : ?>
+          <?php $i = 1; ?>
+          <?php foreach ($tubes_193040057 as $tubes) : ?>
+            <tr>
+              <td><?= $i ?></td>
+              <td>
+                <a href="ubah.php?id=<?= $tubes['id']; ?>" class="text-light"><button type="button" class="update btn btn-primary">Ubah</button></a>
+                <a href="hapus.php?id=<?= $tubes['id']; ?>" onclick="return confirm('Hapus Data??')" class="text-light"><button type="button" class="delete btn btn-danger">Hapus</button></a>
+              </td>
+              <td>
+                <img src="../assets/img/<?= $tubes['gambar'] ?>" style="height: 100px; width: 100px;">
+              </td>
+              <td><?= $tubes['nama'] ?></td>
+              <td><?= $tubes['asal'] ?></td>
+              <td><?= $tubes['jenis'] ?></td>
+              <td><?= $tubes['harga'] ?></td>
+            </tr>
+            <?php $i++ ?>
+          <?php endforeach; ?>
+        <?php endif; ?>
+      </table>
+    </section>
   </div>
 
   <footer class="text-light" style="background-color: darkorange;">

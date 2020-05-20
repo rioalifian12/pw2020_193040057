@@ -29,11 +29,11 @@ if (isset($_POST['cari'])) {
   <div style="background-color: darkorange;">
     <ul class="navbar-nav mr-auto">
       <li style="margin-top: -12px; margin-right: 50px; text-align: right;">
-        <a class="nav-link text-light" href="login.php" style="margin-left: 1000px;">Masuk</a>
+        <a class="nav-link text-light" href="login.php" style="margin-left: 100px;">Masuk</a>
       </li>
     </ul>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light" id="beranda" style="height: 100px;">
+  <nav class="navbar navbar-expand-lg navbar-light" id="beranda">
     <div class="container">
       <a class="navbar-brand" href="#top"><span style="background-color: orange;">Makan</span> <span style="background-color: darkorange; margin-left:-8px;">Khas</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
