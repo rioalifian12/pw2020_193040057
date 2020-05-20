@@ -107,13 +107,13 @@ if (isset($_POST['submit'])) {
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" id="inputEmail4" autofocus>
+          <input type="text" name="username" class="form-control" id="inputEmail4" autofocus required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" id="inputEmail4">
+          <input type="password" name="password" class="form-control" id="inputEmail4" required>
         </div>
       </div>
       <div class="form-group">
