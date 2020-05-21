@@ -43,7 +43,7 @@ if (isset($_POST["register"])) {
       </li>
     </ul>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-light" id="beranda" style="height: 100px;">
+  <nav class="navbar navbar-expand-lg navbar-light" id="beranda">
     <div class="container">
       <a class="navbar-brand" href="#top"><span style="background-color: orange;">Makan</span> <span style="background-color: darkorange; margin-left:-8px;">Khas</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
